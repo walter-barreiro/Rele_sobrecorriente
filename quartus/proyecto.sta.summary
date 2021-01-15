@@ -1,0 +1,29 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'clk'
+Slack : 16.794
+TNS   : 0.000
+
+Type  : Setup 'altera_reserved_tck'
+Slack : 42.949
+TNS   : 0.000
+
+Type  : Hold 'clk'
+Slack : 0.386
+TNS   : 0.000
+
+Type  : Hold 'altera_reserved_tck'
+Slack : 0.413
+TNS   : 0.000
+
+Type  : Recovery 'altera_reserved_tck'
+Slack : 47.416
+TNS   : 0.000
+
+Type  : Removal 'altera_reserved_tck'
+Slack : 1.014
+TNS   : 0.000
+
+------------------------------------------------------------

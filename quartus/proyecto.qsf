@@ -1,0 +1,111 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2009 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II
+# Version 9.0 Build 132 02/25/2009 SJ Web Edition
+# Date created = 11:51:10  May 30, 2020
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		proyecto_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone III"
+set_global_assignment -name DEVICE EP3C16F484C7
+set_global_assignment -name TOP_LEVEL_ENTITY prueba_overcurrent
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 9.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:51:10  MAY 30, 2020"
+set_global_assignment -name LAST_QUARTUS_VERSION 9.0
+set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name LL_ROOT_REGION ON -entity proyecto -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -entity proyecto -section_id "Root Region"
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_location_assignment PIN_G21 -to clk
+set_global_assignment -name MISC_FILE "C:/Users/walte/Desktop/ProyectoDL2/quartus/proyecto.dpf"
+set_location_assignment PIN_J6 -to enable
+set_location_assignment PIN_E4 -to reset
+set_global_assignment -name TIMEQUEST_MULTICORNER_ANALYSIS OFF
+set_location_assignment PIN_H5 -to signal_select
+set_location_assignment PIN_H6 -to signal_select_2
+set_location_assignment PIN_G4 -to fault_I_A
+set_location_assignment PIN_G5 -to fault_I_B
+set_location_assignment PIN_J7 -to fault_I_C
+set_global_assignment -name TIMEQUEST_DO_REPORT_TIMING ON
+set_location_assignment PIN_B1 -to OVERCURRENT
+set_global_assignment -name SIMULATION_MODE TIMING
+set_global_assignment -name TIMEQUEST_DO_CCPP_REMOVAL ON
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE ../simulaciones/prueba_RMS.vwf
+set_global_assignment -name VHDL_FILE ../sources/prueba_relay.vhd
+set_global_assignment -name VHDL_FILE ../sources/prueba_filter.vhd
+set_global_assignment -name VHDL_FILE ../sources/prueba_RMS.vhd
+set_global_assignment -name VHDL_FILE ../sources/prueba_RMS_3.vhd
+set_global_assignment -name VHDL_FILE ../sources/prueba_overcurrent.vhd
+set_global_assignment -name VHDL_FILE ../sources/relay.vhd
+set_global_assignment -name VHDL_FILE ../sources/freq_div.vhd
+set_global_assignment -name VHDL_FILE ../sources/mu_emulator.vhd
+set_global_assignment -name VHDL_FILE ../sources/muestras.vhd
+set_global_assignment -name VHDL_FILE ../sources/ram_dq.vhd
+set_global_assignment -name VHDL_FILE ../sources/ram_dq_2.vhd
+set_global_assignment -name VHDL_FILE ../sources/RMS.vhd
+set_global_assignment -name VHDL_FILE ../sources/RMS_3.vhd
+set_global_assignment -name VHDL_FILE ../sources/RMS_6.vhd
+set_global_assignment -name VHDL_FILE ../sources/samples.vhd
+set_global_assignment -name VHDL_FILE ../sources/signal_IA.vhd
+set_global_assignment -name VHDL_FILE ../sources/signal_IB.vhd
+set_global_assignment -name VHDL_FILE ../sources/signal_IC.vhd
+set_global_assignment -name VHDL_FILE ../sources/sinc_rom.vhd
+set_global_assignment -name VHDL_FILE ../sources/sinc_rom_IB.vhd
+set_global_assignment -name VHDL_FILE ../sources/sinc_rom_IC.vhd
+set_global_assignment -name VHDL_FILE ../sources/sqrt_wizard.vhd
+set_global_assignment -name VHDL_FILE ../sources/suma_4.vhd
+set_global_assignment -name VHDL_FILE ../sources/overcurrent_selector.vhd
+set_global_assignment -name VHDL_FILE ../sources/contador_binario.vhd
+set_global_assignment -name VHDL_FILE ../sources/filter.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE ../simulaciones/prueba_overcurrent.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE ../simulaciones/prueba_RMS_3.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE ../simulaciones/hallar_polo_filtro.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE ../simulaciones/RMS.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE ../simulaciones/prueba_RMS.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE ../simulaciones/contador_binario.vwf
+set_global_assignment -name SDC_FILE rms_3.sdc
+set_global_assignment -name QIP_FILE altfp_loa.qip
+set_global_assignment -name QIP_FILE add_pf.qip
+set_global_assignment -name QIP_FILE div_pf.qip
+set_global_assignment -name QIP_FILE mult_pf.qip
+set_global_assignment -name QIP_FILE ram_filter.qip
+set_global_assignment -name QIP_FILE lpm_div.qip
+set_global_assignment -name QIP_FILE IDMT_SI_200_01_rom.qip
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

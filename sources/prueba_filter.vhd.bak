@@ -1,0 +1,145 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.STD_LOGIC_UNSIGNED.ALL;
+
+library work;
+use work.pk_mu_emulator.all;
+use work.pk_RMS_3.all;
+use work.PK_FREQ_DIV.all;
+use work.pk_contador_binario.all;
+use work.pk_samples.all;
+use work.pk_mean.all;
+
+entity prueba_filter is
+	PORT (
+		-- INPUT
+		clk         : IN STD_LOGIC;	
+		reset 		: IN STD_LOGIC;
+		enable      : IN STD_LOGIC;
+	
+		-- OUTPUT
+		data_out    : OUT STD_LOGIC_VECTOR(15 downto 0)
+
+	);
+end prueba_filter;      
+
+
+architecture arch of prueba_filter is
+	
+	constant M : integer := 10;
+	constant N : integer := 16;
+	
+	signal s_clk, ready_data: std_logic;
+	signal s_address: std_logic_vector(M-1 downto 0);
+	signal s_data: std_logic_vector(N-1 downto 0);
+	signal q_ram, I_A_signal: std_logic_vector(N-1 downto 0);
+  
+	SIGNAL Xn   : STD_LOGIC_VECTOR(N-1 downto 0) := (OTHERS => '0');
+	SIGNAL Xn_1 : STD_LOGIC_VECTOR(N-1 downto 0) := (OTHERS => '0');
+	SIGNAL Xn_2 : STD_LOGIC_VECTOR(N-1 downto 0) := (OTHERS => '0');
+	SIGNAL Xn_3 : STD_LOGIC_VECTOR(N-1 downto 0) := (OTHERS => '0');
+	SIGNAL Yn   : STD_LOGIC_VECTOR(N-1 downto 0) := (OTHERS => '0');
+		  
+	component ram_filter IS
+		PORT
+		(
+			address			: IN STD_LOGIC_VECTOR (M-1 DOWNTO 0);
+			clock			: IN STD_LOGIC ;
+			data			: IN STD_LOGIC_VECTOR (N-1 DOWNTO 0);
+			wren			: IN STD_LOGIC ;
+			q				: OUT STD_LOGIC_VECTOR (N-1 DOWNTO 0)
+		);
+	END component;
+	
+		component sinc_rom IS
+		PORT
+		(
+			address			: IN STD_LOGIC_VECTOR (M-1 DOWNTO 0);
+			clock			: IN STD_LOGIC ;
+			q				: OUT STD_LOGIC_VECTOR (N-1 DOWNTO 0)
+		);
+	END component;
+		
+begin
+
+
+-------------------
+ready_signal_inst : FREQ_DIV
+-------------------
+	generic map (
+		FREC_IN => 50000,
+		FREC_OUT => 5000
+	 )
+	 port map (
+		 CLK_IN => clk,
+		 CLK_OUT => s_clk
+	 );
+	
+---------------
+address_counter : contador_binario 
+---------------
+	generic map (
+		N => 10
+	)
+	port map (
+		clk => s_clk, 
+	    clear => NOT reset, 
+		enable => enable,
+	    count => s_address,
+	    COUNT_MAX => std_logic_vector(to_unsigned(1024, 10)) 
+	    -- COUNT_MAX tope del contador, en este caso corresponde a 20 -> cant de muestras en UN CICLO
+	);
+
+
+--------------
+I_A_signal_rom : sinc_rom
+--------------
+	PORT MAP (
+		address	 => s_address,
+		clock	 => clk,
+		q	 	 => I_A_signal
+	);
+	
+	
+samples_inst : samples
+	GENERIC MAP (
+		N => N
+	)
+	PORT MAP (
+			input 	=> I_A_signal,
+			clk   	=> s_clk,
+			enable	=> enable,
+			o_0   	=> Xn,
+			o_1   	=> Xn_1,
+			o_2   	=> Xn_2,
+			o_3   	=> Xn_3
+	);
+
+suma_4_inst : mean
+	PORT MAP (
+			i_0   => Xn,   -- Xn
+			i_1   => Xn_1, -- Xn-1
+			i_2   => Xn_2, -- Xn-2
+			i_3   => Xn_3, -- Xn-3
+			clk   => s_clk,
+--			enable=>;
+			o     => Yn    -- Yn
+	);
+
+
+--------------
+ram_filter_inst : ram_filter
+--------------
+	PORT MAP (
+		address	     => s_address,
+		clock	 	 => clk,
+		data	 	 =>  Yn,
+		wren	 	 => s_clk,
+		q	 		 => q_ram
+	);
+
+data_out <= Yn;
+
+
+end architecture; 

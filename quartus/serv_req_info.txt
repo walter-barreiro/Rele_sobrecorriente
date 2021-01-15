@@ -1,0 +1,177 @@
+<internal_error>
+	<executable>quartus.exe</executable>
+	<sub_system>unknown</sub_system>
+	<file>unknown</file>
+	<line>0</line>
+	<callstack>
+	0x11ef34ef: sld_red + 0x34ef
+	0x11efcc0d: sld_red + 0xcc0d (sld_red_dll_get_template_classes + 0x47ed)
+	</callstack>
+	<error>Current editor: STED, RUI, RPW, STED, STED</error>
+	<date>Mon Jun 22 22:20:45 2020</date>
+	<version>Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition</version>
+	<full_error>Access Violation at 0X11EF34EF
+Current editor: STED, RUI, RPW, STED, STED
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition </full_error>
+</internal_error>
+
+<internal_error>
+	<executable>quartus.exe</executable>
+	<sub_system>unknown</sub_system>
+	<file>unknown</file>
+	<line>0</line>
+	<callstack>
+	0x0e13cba7: sld_red + 0xcba7 (sld_red_dll_get_template_classes + 0x4787)
+	0x0e14098a: sld_red + 0x1098a (sld_red_dll_get_template_classes + 0x856a)
+	0x0e14104c: sld_red + 0x1104c (sld_red_dll_get_template_classes + 0x8c2c)
+	0x0e14154b: sld_red + 0x1154b (sld_red_dll_get_template_classes + 0x912b)
+	0x71e8d955: mfc90 + 0x8d955
+	0x71e5be7f: mfc90 + 0x5be7f
+	0x100062ac: GCL_AFC + 0x62ac (?OnWndMsg@AFC_NESTED_FRAME@@UAEHIIJPAJ@Z + 0x3c)
+	0x71e5ba48: mfc90 + 0x5ba48
+	0x71e5a63c: mfc90 + 0x5a63c
+	0x71e5a8c8: mfc90 + 0x5a8c8
+	0x71e585b2: mfc90 + 0x585b2
+	0x774644ba: USER32 + 0x444ba (AddClipboardFormatListener + 0x4a)
+	0x77444ffb: USER32 + 0x24ffb (CallWindowProcW + 0xb2b)
+	0x77444b99: USER32 + 0x24b99 (CallWindowProcW + 0x6c9)
+	0x7744e1de: USER32 + 0x2e1de (IsRectEmpty + 0x1fe)
+	0x779d428c: ntdll + 0x7428c (KiUserCallbackDispatcher + 0x4c)
+	0x7745e8af: USER32 + 0x3e8af (DispatchMessageA + 0xf)
+	0x71e9a866: mfc90 + 0x9a866
+	0x00c41968: ccl_thr + 0x1968 (thr_thread_var_destroy + 0x28)
+	0x71e671e7: mfc90 + 0x671e7
+	0x0044f42e: quartus + 0x4f42e (Pjm_Uninit + 0x401ee)
+	0x76e26358: KERNEL32 + 0x16358 (BaseThreadInitThunk + 0x18)
+	0x779c7c23: ntdll + 0x67c23 (RtlGetAppContainerNamedObjectPath + 0xe3)
+	0x779c7bf3: ntdll + 0x67bf3 (RtlGetAppContainerNamedObjectPath + 0xb3)
+	0xffffffffffffffff:
+	</callstack>
+	<error>Current editor: RPW, STED, STED, STED</error>
+	<date>Tue Jun 23 18:14:04 2020</date>
+	<version>Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition</version>
+	<full_error>Access Violation at 0X0E13CBA7
+Current editor: RPW, STED, STED, STED
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition </full_error>
+</internal_error>
+
+<internal_error>
+	<executable>quartus.exe</executable>
+	<sub_system>unknown</sub_system>
+	<file>unknown</file>
+	<line>0</line>
+	<callstack>
+	0x0dbc02c8: sld_red + 0x102c8 (sld_red_dll_get_template_classes + 0x7ea8)
+	0x504faf5f: mfc90 + 0x25af5f
+	0x0dbc104c: sld_red + 0x1104c (sld_red_dll_get_template_classes + 0x8c2c)
+	0x0dbc154b: sld_red + 0x1154b (sld_red_dll_get_template_classes + 0x912b)
+	0x5032d955: mfc90 + 0x8d955
+	0x502fbe7f: mfc90 + 0x5be7f
+	0x100062ac: GCL_AFC + 0x62ac (?OnWndMsg@AFC_NESTED_FRAME@@UAEHIIJPAJ@Z + 0x3c)
+	0x502fba48: mfc90 + 0x5ba48
+	0x502fa63c: mfc90 + 0x5a63c
+	0x502fa8c8: mfc90 + 0x5a8c8
+	0x502f85b2: mfc90 + 0x585b2
+	0x774644ba: USER32 + 0x444ba (AddClipboardFormatListener + 0x4a)
+	0x77444ffb: USER32 + 0x24ffb (CallWindowProcW + 0xb2b)
+	0x77444b99: USER32 + 0x24b99 (CallWindowProcW + 0x6c9)
+	0x7744e1de: USER32 + 0x2e1de (IsRectEmpty + 0x1fe)
+	0x779d428c: ntdll + 0x7428c (KiUserCallbackDispatcher + 0x4c)
+	0x7745e8af: USER32 + 0x3e8af (DispatchMessageA + 0xf)
+	0x5033a866: mfc90 + 0x9a866
+	0x00c41968: ccl_thr + 0x1968 (thr_thread_var_destroy + 0x28)
+	0x503071e7: mfc90 + 0x671e7
+	0x0044f42e: quartus + 0x4f42e (Pjm_Uninit + 0x401ee)
+	0x76e26358: KERNEL32 + 0x16358 (BaseThreadInitThunk + 0x18)
+	0x779c7c23: ntdll + 0x67c23 (RtlGetAppContainerNamedObjectPath + 0xe3)
+	0x779c7bf3: ntdll + 0x67bf3 (RtlGetAppContainerNamedObjectPath + 0xb3)
+	0xffffffffffffffff:
+	</callstack>
+	<error>Current editor: STED, STED, RPW</error>
+	<date>Thu Jun 25 11:57:51 2020</date>
+	<version>Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition</version>
+	<full_error>Access Violation at 0X0DBC02C8
+Current editor: STED, STED, RPW
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition </full_error>
+</internal_error>
+
+<internal_error>
+	<executable>quartus.exe</executable>
+	<sub_system>unknown</sub_system>
+	<file>unknown</file>
+	<line>0</line>
+	<callstack>
+	0x0d5c02c8: sld_red + 0x102c8 (sld_red_dll_get_template_classes + 0x7ea8)
+	0x504faf5f: mfc90 + 0x25af5f
+	0x0d5c104c: sld_red + 0x1104c (sld_red_dll_get_template_classes + 0x8c2c)
+	0x0d5c154b: sld_red + 0x1154b (sld_red_dll_get_template_classes + 0x912b)
+	0x5032d955: mfc90 + 0x8d955
+	0x502fbe7f: mfc90 + 0x5be7f
+	0x100062ac: GCL_AFC + 0x62ac (?OnWndMsg@AFC_NESTED_FRAME@@UAEHIIJPAJ@Z + 0x3c)
+	0x502fba48: mfc90 + 0x5ba48
+	0x502fa63c: mfc90 + 0x5a63c
+	0x502fa8c8: mfc90 + 0x5a8c8
+	0x502f85b2: mfc90 + 0x585b2
+	0x774644ba: USER32 + 0x444ba (AddClipboardFormatListener + 0x4a)
+	0x77444ffb: USER32 + 0x24ffb (CallWindowProcW + 0xb2b)
+	0x77444b99: USER32 + 0x24b99 (CallWindowProcW + 0x6c9)
+	0x7744e1de: USER32 + 0x2e1de (IsRectEmpty + 0x1fe)
+	0x779d428c: ntdll + 0x7428c (KiUserCallbackDispatcher + 0x4c)
+	0x7745e8af: USER32 + 0x3e8af (DispatchMessageA + 0xf)
+	0x5033a866: mfc90 + 0x9a866
+	0x00c41968: ccl_thr + 0x1968 (thr_thread_var_destroy + 0x28)
+	0x503071e7: mfc90 + 0x671e7
+	0x0044f42e: quartus + 0x4f42e (Pjm_Uninit + 0x401ee)
+	0x76e26358: KERNEL32 + 0x16358 (BaseThreadInitThunk + 0x18)
+	0x779c7c23: ntdll + 0x67c23 (RtlGetAppContainerNamedObjectPath + 0xe3)
+	0x779c7bf3: ntdll + 0x67bf3 (RtlGetAppContainerNamedObjectPath + 0xb3)
+	0xffffffffffffffff:
+	</callstack>
+	<error>Current editor: WED, RPW</error>
+	<date>Thu Jun 25 12:00:04 2020</date>
+	<version>Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition</version>
+	<full_error>Access Violation at 0X0D5C02C8
+Current editor: WED, RPW
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition </full_error>
+</internal_error>
+
+<internal_error>
+	<executable>quartus.exe</executable>
+	<sub_system>unknown</sub_system>
+	<file>unknown</file>
+	<line>0</line>
+	<callstack>
+	0x0cec02c8: sld_red + 0x102c8 (sld_red_dll_get_template_classes + 0x7ea8)
+	0x7ae2af5f: mfc90 + 0x25af5f
+	0x0cec104c: sld_red + 0x1104c (sld_red_dll_get_template_classes + 0x8c2c)
+	0x0cec154b: sld_red + 0x1154b (sld_red_dll_get_template_classes + 0x912b)
+	0x7ac5d955: mfc90 + 0x8d955
+	0x7ac2be7f: mfc90 + 0x5be7f
+	0x100062ac: GCL_AFC + 0x62ac (?OnWndMsg@AFC_NESTED_FRAME@@UAEHIIJPAJ@Z + 0x3c)
+	0x7ac2ba48: mfc90 + 0x5ba48
+	0x7ac2a63c: mfc90 + 0x5a63c
+	0x7ac2a8c8: mfc90 + 0x5a8c8
+	0x7ac285b2: mfc90 + 0x585b2
+	0x774644ba: USER32 + 0x444ba (AddClipboardFormatListener + 0x4a)
+	0x77444ffb: USER32 + 0x24ffb (CallWindowProcW + 0xb2b)
+	0x77444b99: USER32 + 0x24b99 (CallWindowProcW + 0x6c9)
+	0x7744e1de: USER32 + 0x2e1de (IsRectEmpty + 0x1fe)
+	0x779d428c: ntdll + 0x7428c (KiUserCallbackDispatcher + 0x4c)
+	0x7745e8af: USER32 + 0x3e8af (DispatchMessageA + 0xf)
+	0x7ac6a866: mfc90 + 0x9a866
+	0x00c41968: ccl_thr + 0x1968 (thr_thread_var_destroy + 0x28)
+	0x7ac371e7: mfc90 + 0x671e7
+	0x0044f42e: quartus + 0x4f42e (Pjm_Uninit + 0x401ee)
+	0x76e26358: KERNEL32 + 0x16358 (BaseThreadInitThunk + 0x18)
+	0x779c7c23: ntdll + 0x67c23 (RtlGetAppContainerNamedObjectPath + 0xe3)
+	0x779c7bf3: ntdll + 0x67bf3 (RtlGetAppContainerNamedObjectPath + 0xb3)
+	0xffffffffffffffff:
+	</callstack>
+	<error>Current editor: STED, RPW, STED, STED, STED</error>
+	<date>Tue Jul 07 21:24:58 2020</date>
+	<version>Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition</version>
+	<full_error>Access Violation at 0X0CEC02C8
+Current editor: STED, RPW, STED, STED, STED
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition </full_error>
+</internal_error>
+
